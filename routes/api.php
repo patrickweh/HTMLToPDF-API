@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/convert', [Base64ToPDFController::class, 'convert']);
+Route::get('/convert/{token}', [Base64ToPDFController::class, 'merge']);
